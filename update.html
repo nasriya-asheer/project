@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="../static/add.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Enter details:</h1>
+        <form method="POST" action="/update">
+
+
+            <div class="input">
+                <label>Enter Project ID:</label>
+                <input type="number" name="P_ID">
+            </div>
+            <div class="input">
+                <label>Enter column_to_update :</label>
+                <input type="text" name="column_to_update">
+            </div>
+            
+            <div class="input">
+                <label>Enter New Value:</label>
+                {% if column_to_update == 'date' %}
+                    <input type="date" name="new_value" required>
+                {% else %}
+                    <input type="text" name="new_value" required>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+</body>
+</html>

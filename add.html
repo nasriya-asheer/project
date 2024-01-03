@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+</head><link rel="stylesheet" href="../static/add.css">
+<body>
+    <div class="wrapper">
+        <h1>Enter details:</h1>
+        <form method="POST" action="/add">
+
+
+            <div class="input">
+                <label>Enter Project ID:</label>
+                <input type="number" name="P_ID">
+            </div>
+            <div class="input">
+                <label>Enter Project name:</label>
+                <input type="text" name="P_NAME">
+            </div>
+            <div class="input">
+                <label>Enter Project description:</label>
+                <input type="text" name="ABOUT">
+            </div>
+            <div class="input">
+                <label>Enter Project status:</label>
+                <input type="text" name="CURRENT_STATUS">
+            </div>
+            <div class="input">
+                <label>Enter Project in-charge:</label>
+                <input type="text" name="PROJECT_INCHARGE">
+            </div>
+            <div class="input">
+                <label>Enter Project due-date:</label>
+                <input type="date" name="DUE_DATE">
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

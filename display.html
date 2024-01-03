@@ -1,0 +1,48 @@
+<!-- display.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>display</title>
+    <link rel="stylesheet" href="../static/display.css">
+</head>
+<body>
+    <div>
+        <h2>PROJECTS</h2>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>P_ID</th>
+                    <th>P_NAME</th>
+                    <th>ABOUT</th>
+                    <th>CURRENT_STATUS</th>
+                    <th>PROJECT_INCHARGE</th>
+                    <th>DUE_DATE</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if sqldata %}
+                    {% for i in sqldata %}
+                        <tr>
+                            <td>{{ i[0] }}</td>
+                            <td>{{ i[1] }}</td>
+                            <td>{{ i[2] }}</td>
+                            <td>{{ i[3] }}</td>
+                            <td>{{ i[4] }}</td>
+                            <td>{{ i[5] }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="6">No data available</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+
+        <div class="head-tag">
+            <a href="/home">Back</a>
+        </div>
+    </div>
+</body>
+</html>
